@@ -4,11 +4,15 @@ const skills = [
 	{ id: 139608, skill: 'Running', done: false },
 ];
 
-module.exports = {
-	getAll,
-	
-};
-
 function getAll() {
 	return skills;
+}
+module.exports = {
+	getAll,
+	getOne,
+};
+
+function getOne(id) {
+	// Use the Array.prototype.find iterator method
+	return skills.find((skills) => skills.id === parseInt(id));
 }
